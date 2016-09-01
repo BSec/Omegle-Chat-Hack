@@ -11,6 +11,7 @@
 # Date:     19-08-2016
 #
 # This tool downloads random chat logs which are saved in omegle's server.
+# Code was wrtitten for Python 3.x.x software versions.
 ###########################################################################
 
 
