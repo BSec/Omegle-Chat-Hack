@@ -58,6 +58,7 @@ for j in range (Fromnumber,numberofImagesWanted):
 					finalurl = url + str(''.join(i))+ ".png"
 					j=j+1
 					if counter>=numberofImagesWanted+1 :
+						print("\nExecution completed.")
 						exit(0)
 					omRequest = urllib.request.Request(finalurl)
 					#print(counter, ": ",finalurl);
