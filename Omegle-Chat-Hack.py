@@ -38,7 +38,7 @@ for j in range (0,numberofImagesWanted):
 					exit(0)
 
 				omRequest = urllib.request.Request(finalurl)
-				print(finalurl+"\n");
+				#print(finalurl+"\n");
 				try :
 					req = urllib.request.urlopen(omRequest)
 					print('Chat downloaded \n***********************\n')
